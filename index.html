@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Face Chooser</title>
+    <style>
+        body{
+            background-color: #4697e7;
+            background-image: linear-gradient(62deg, #4697e7 0%, #f50dec 100%);
+
+            min-height: 100vh;
+        }
+        .title{
+         text-align: center;
+         color: #fff;
+        }
+        
+        .box-main{
+               border-radius: 50px;
+               background-color: #fff;
+               height: 500px;
+               width: 530px;
+               display: block;
+               margin: 10px auto;
+               box-shadow: 0 0 5px 1px hsl(0, 0%, 4%);
+        }
+
+        .button{
+            margin-left: -90px;
+        }
+        .female{
+            padding-top: 90px;
+            display: block;
+            margin:20px auto;
+            height: 200px;
+            width: 200px;
+        }
+        .btn{
+            display: inline;
+            margin-left: 40%;
+            padding: 10px 20px;
+            border-radius: 50px;
+            background-image: linear-gradient( 58.2deg,  hsla(323, 99%, 51%, 0.729) -3%, hsla(323, 99%, 51%, 0.729), hsla(323, 99%, 51%, 0.729) );            display: inline;
+            border: 1px;
+            color: #050505;
+            font-size: 15px;
+            font-weight: 300;
+            width: 100px;
+        }
+        .male{
+            color: black;
+            background-image: linear-gradient( 58.2deg,  #1352e6ba -3%, #1352e6ba, #1352e6ba );            display: inline;
+            display: inline;
+            margin: 50px;
+            padding: 10px 20px;
+            font-size: 15px;
+            border-radius: 50px;
+            border: none;
+            width: 100px;
+        }
+        @media screen and (max-width:505px) {
+            .box{
+                width: 90%;
+                margin-left:10%;
+                background-color: aliceblue;
+            }
+            .female{
+                width: 50%;
+            }
+            .btn sad{
+                margin-left: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Enter Your Gender</h1>
+<div class="box-main">
+    <img src="female.png" class="female" id="female">
+<div class="button">
+    <button type="button" class="btn"onclick="female()">Female</button>
+    <button  type="button" class="male"onclick="male()">Male</button>
+</div>
+</div>
+    <script>
+        const emojiElement=document.getElementById('female');
+        function female(){
+            emojiElement.src="female.png";
+        
+        }
+        function male(){
+            emojiElement.src="male.png ";
+
+        }
+    </script>
+</body>
+</html>
